@@ -6,7 +6,6 @@ import Backdrop from "./ModalBackdrop";
 import SuccessModal from "./SuccessModal";
 import ErrorModal from "./ErrorModal";
 
-
 const modal = (props) => {
   let innerModalRender = null;
   if (props.status === "success") {
@@ -15,14 +14,13 @@ const modal = (props) => {
         <SuccessModal closeModal={props.closeModal} />
       </Fade>
     );
-  }else if (props.status === "error") {
+  } else if (props.status === "error") {
     innerModalRender = (
       <Fade bottom duration={500}>
         <ErrorModal closeModal={props.closeModal} />
       </Fade>
     );
   }
-
 
   return (
     <div className="modal">
