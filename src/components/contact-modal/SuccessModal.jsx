@@ -7,7 +7,13 @@ const successModal = (props) => (
     <p>
       Thank you for your email.<br></br>We will respond as soon as possible.
     </p>
-    <div role="button" tabIndex={0} className="modal__btn flex-center" onClick={props.closeModal} onKeyDown={props.closeModal}>
+    <div
+      role="button"
+      tabIndex={0}
+      className="modal__btn flex-center"
+      onClick={props.closeModal}
+      onKeyDown={props.closeModal}
+    >
       <p>Ok</p>
     </div>
   </div>
