@@ -1,5 +1,6 @@
 import React from "react";
 
+//Pages
 import About from "./components/about/about";
 import Blog from "./components/blog/blog";
 import Contact from "./components/contact/contact";
@@ -9,7 +10,6 @@ import Backdrop from "./components/navbar/backdrop";
 // Components
 import DesktopNav from "./components/navbar/desktop-nav";
 import MobileNav from "./components/navbar/mobile-nav";
-import Partners from "./components/partners/partners";
 import Portfolio from "./components/portfolio/portfolio";
 
 import "./style/App.scss";
@@ -27,7 +27,7 @@ class App extends React.Component {
     window.removeEventListener("scroll", this.userIsScrolled);
   }
 
-  // Detect if user is scorlled down (used for add/disable extra large navbar)
+  // Detect if users is scrolled down (used for add/disable extra large navbar)
   userIsScrolled = () => {
     if (window.pageYOffset > 80) {
       this.setState({ userIsScrolled: true });
@@ -39,7 +39,8 @@ class App extends React.Component {
   closeMobileMenu = () => {
     this.setState({ mobileNavbarOpen: false });
   };
-  // Mobile menu handler
+  //
+  // Mobile menu handlers
   mobileMenuOpen = () => {
     this.setState({ mobileNavbarOpen: true });
   };
