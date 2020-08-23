@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col } from "react-flexbox-grid";
 import "./about.scss";
 // Components
-import TeamBox from './teamBox';
+import TeamBox from "./teamBox";
 import TeamInfo from "./teamInfo";
 import Title from "../ui-components/title/title";
 // Assets
@@ -12,17 +12,26 @@ import Person02 from "../../assets/about/person02.png";
 const about = () => (
   <div id="about">
     <div className="wrapper">
-      <Title title="ABOUT US." />
+      <Title title="EDUCATION & SKILLS" />
       <p className="font12">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt<br></br>ut labore et dolore magna aliqua.
+        Skilled in ABM, Marketing, Sales, Entrepreneurship, Javascript and
+        Organic Chemistry
       </p>
       <Row>
         <Col md={12} lg={4}>
-          <TeamBox avatar={Person01} name="Luke Skywalker" job="Web designer" />
+          <TeamBox
+            avatar={Person01}
+            name="UC BERKELEY EXTENSION"
+            job="Computer Science Engineering"
+          />
         </Col>
         <Col md={12} lg={4}>
-          <TeamBox avatar={Person02} name="Han Solo" job="Graphic Designer" />
+          <TeamBox
+            avatar={Person02}
+            name="VIRGINIA TECH"
+            job="MS, Organic Chemistry
+"
+          />
         </Col>
         <Col md={12} lg={4}>
           <TeamInfo />

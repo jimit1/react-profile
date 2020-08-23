@@ -25,45 +25,51 @@ class Portfolio extends React.Component {
         {
           id: "1",
           preview: Preview1,
-          title: "Lamp",
-          tag: "branding",
+          title: "CommerceIQ",
+          tag: "ABM",
+          link: "https://commerceiq.ai/",
         },
         {
           id: "2",
           preview: Preview2,
-          title: "Smartwatch",
-          tag: "web",
+          title: "JM Consulting",
+          tag: "ABM",
+          link: "https://www.linkedin.com/in/jimmehta/",
         },
         {
           id: "3",
           preview: Preview3,
-          title: "Speakerphone",
-          tag: "illustrations",
+          title: "Scale AI",
+          tag: "ABM",
+          link: "http://scale.com/",
         },
         {
           id: "4",
           preview: Preview4,
-          title: "Sneakers",
-          tag: "web",
+          title: "Chartio",
+          tag: "Sales",
+          link: "http://chartio.com/",
         },
         {
           id: "5",
           preview: Preview5,
-          title: "Label",
-          tag: "illustrations",
+          title: "Stitch Labs",
+          tag: "ABM",
+          link: "https://www.stitchlabs.com/",
         },
         {
           id: "6",
           preview: Preview6,
-          title: "lemons",
-          tag: "branding",
+          title: "Ankit Enterprise",
+          tag: "Entrepreneurship",
+          link: "http://ankit-enterprise.com/",
         },
       ],
       // PORTFOLIO GALLERY WILL LOAD THIS AFTER FUNCTION "filterGallery" FINISH FILTERING
       filterResult: null,
       pickedFilter: "all",
       filterMenuActive: false,
-      pickedFilterDropdown: "NEWEST"
+      pickedFilterDropdown: "NEWEST",
     };
   }
 
@@ -83,17 +89,21 @@ class Portfolio extends React.Component {
       result = projectsArr;
     }
 
-    this.setState({ filterResult: result, pickedFilter: target, pickedFilterDropdown: "NEWEST" });
+    this.setState({
+      filterResult: result,
+      pickedFilter: target,
+      pickedFilterDropdown: "NEWEST",
+    });
   };
 
   // FILTER DROP DOWN HOVER MENU FUNCTION
   filterMenuHover = (event) => {
-    if(event) {
+    if (event) {
       this.setState({ filterMenuActive: true });
-    }else {
+    } else {
       this.setState({ filterMenuActive: false });
     }
-  }
+  };
 
   // FILTER DROP DOWN HANDLER
   filterDropDownHandler = (filter) => {
@@ -104,12 +114,12 @@ class Portfolio extends React.Component {
 
     if (filter === "NEWEST") {
       result = projectsArr.sort((a, b) => (a.id > b.id ? 1 : -1));
-    }else if (filter === "OLDEST") {
+    } else if (filter === "OLDEST") {
       result = projectsArr.sort((a, b) => (a.id > b.id ? 1 : -1)).reverse();
     }
 
-    this.setState({ filterResult: result});
-  }
+    this.setState({ filterResult: result });
+  };
 
   // RENDER
   render() {
@@ -117,7 +127,13 @@ class Portfolio extends React.Component {
     let projectsRender = null;
     if (this.state.filterResult) {
       projectsRender = this.state.filterResult.map((project) => (
-        <ProjectBox preview={project.preview} key={project.id} title={project.title} tag={project.tag} />
+        <ProjectBox
+          preview={project.preview}
+          key={project.id}
+          title={project.title}
+          tag={project.tag}
+          link={project.link}
+        />
       ));
     }
     // PORTFOLIO GALLERY BREAKPOINTS
@@ -129,13 +145,19 @@ class Portfolio extends React.Component {
     };
     // PORTFOLIO FILTER DROPDOWN MENY RENDER
     let filterDroppDown = null;
-    if(this.state.filterMenuActive) {
+    if (this.state.filterMenuActive) {
       filterDroppDown = (
         <div className="portfolio__filter-menu shadow">
-          <p className="font12" onClick={() => this.filterDropDownHandler("NEWEST")}>
+          <p
+            className="font12"
+            onClick={() => this.filterDropDownHandler("NEWEST")}
+          >
             NEWEST
           </p>
-          <p className="font12" onClick={() => this.filterDropDownHandler("OLDEST")}>
+          <p
+            className="font12"
+            onClick={() => this.filterDropDownHandler("OLDEST")}
+          >
             OLDEST
           </p>
         </div>
@@ -145,45 +167,77 @@ class Portfolio extends React.Component {
     return (
       <div id="portfolio">
         <div className="wrapper">
-          <Title title="WORK SHOWCASE." />
+          <Title title="EXPERIENCE" />
           <Row>
             <Col xs={12} sm={12} md={8} lg={9}>
               <div className="portfolio__nav">
                 <ul>
-                  <li className={this.state.pickedFilter === "all" ? "portfolio__nav-active font12" : "font12"} onClick={() => this.filterGallery("all")}>
+                  <li
+                    className={
+                      this.state.pickedFilter === "all"
+                        ? "portfolio__nav-active font12"
+                        : "font12"
+                    }
+                    onClick={() => this.filterGallery("all")}
+                  >
                     ALL
                   </li>
                   <li
-                    className={this.state.pickedFilter === "branding" ? "portfolio__nav-active font12" : "font12"}
-                    onClick={() => this.filterGallery("branding")}
+                    className={
+                      this.state.pickedFilter === "ABM"
+                        ? "portfolio__nav-active font12"
+                        : "font12"
+                    }
+                    onClick={() => this.filterGallery("ABM")}
                   >
-                    BRANDING
+                    ABM
                   </li>
                   <li
-                    className={this.state.pickedFilter === "illustrations" ? "portfolio__nav-active font12" : "font12"}
-                    onClick={() => this.filterGallery("illustrations")}
+                    className={
+                      this.state.pickedFilter === "Sales"
+                        ? "portfolio__nav-active font12"
+                        : "font12"
+                    }
+                    onClick={() => this.filterGallery("Sales")}
                   >
-                    ILLUSTRATIONS
+                    SALES
                   </li>
-                  <li className={this.state.pickedFilter === "web" ? "portfolio__nav-active font12" : "font12"} onClick={() => this.filterGallery("web")}>
-                    WEB
+                  <li
+                    className={
+                      this.state.pickedFilter === "Entrepreneurship"
+                        ? "portfolio__nav-active font12"
+                        : "font12"
+                    }
+                    onClick={() => this.filterGallery("Entrepreneurship")}
+                  >
+                    ENTREPRENEURSHIP
                   </li>
                 </ul>
               </div>
             </Col>
             <Col xs={12} sm={12} md={4} lg={3}>
-              <div className="portfolio__filter" onMouseEnter={() => this.filterMenuHover(true)} onMouseLeave={() => this.filterMenuHover(false)}>
-                <p className="font12">{this.state.pickedFilterDropdown} FIRST</p>
+              <div
+                className="portfolio__filter"
+                onMouseEnter={() => this.filterMenuHover(true)}
+                onMouseLeave={() => this.filterMenuHover(false)}
+              >
+                <p className="font12">
+                  {this.state.pickedFilterDropdown} FIRST
+                </p>
                 <img src={Arrow} alt="arrow" />
                 {filterDroppDown}
               </div>
             </Col>
           </Row>
-          <Masonry breakpointCols={portfolioBreakpoints} className="my-masonry-grid" columnClassName="mint__gallery">
+          <Masonry
+            breakpointCols={portfolioBreakpoints}
+            className="my-masonry-grid"
+            columnClassName="mint__gallery"
+          >
             {projectsRender}
           </Masonry>
           <Row className="flex-center padding40">
-            <Button label="HAVE WORK FOR US?" target={"contact"} />
+            {/* <Button label="HAVE WORK FOR US?" target={"contact"} /> */}
           </Row>
         </div>
       </div>

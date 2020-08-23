@@ -3,8 +3,8 @@ import { Link } from "react-scroll";
 // SCSS
 import "./navbar.scss";
 // Assets
-import CloseIcons from '../../assets/navbar/mobile-close.svg';
-import Logo from "../../assets/navbar/logo-yellow.svg";
+import CloseIcons from "../../assets/navbar/mobile-close.svg";
+import Logo from "../../assets/footer/jimitlogo.png";
 
 const mobileNav = (props) => (
   <div className={`mobile__navbar ${props.isOpen ? "mobile__open" : ""}`}>
@@ -35,7 +35,7 @@ const mobileNav = (props) => (
             duration={500}
             onClick={props.closeMobileMenu}
           >
-            WORK
+            EXPERIENCE
           </Link>
         </li>
         <li className="flex-center">
@@ -48,7 +48,7 @@ const mobileNav = (props) => (
             duration={500}
             onClick={props.closeMobileMenu}
           >
-            ABOUT
+            EDUCATION & SKILLS
           </Link>
         </li>
         <li className="flex-center">
@@ -61,7 +61,7 @@ const mobileNav = (props) => (
             duration={500}
             onClick={props.closeMobileMenu}
           >
-            BLOG
+            PROJECTS
           </Link>
         </li>
         <li className="flex-center">

@@ -4,11 +4,9 @@ import "./contactInfo.scss";
 
 import ContactInfoBox from "../contactInfo/contactInfoBox";
 
-
-import ContactInfoIcon1 from '../../../assets/contact/contact-info-icon1.svg';
+import ContactInfoIcon1 from "../../../assets/contact/contact-info-icon1.svg";
 import ContactInfoIcon2 from "../../../assets/contact/contact-info-icon2.svg";
 import ContactInfoIcon3 from "../../../assets/contact/contact-info-icon3.svg";
-
 
 const contactInfo = () => (
   <Row>
@@ -17,22 +15,20 @@ const contactInfo = () => (
         <Col xs={12} lg={3} className="contact__info">
           <ContactInfoBox
             icon={ContactInfoIcon1}
-            textLine1="1211 Awesome Avenue,"
-            textLine2="NY USD"
+            textLine1="1630 Broadway, Alameda"
+            textLine2="CA 94501"
           />
         </Col>
         <Col xs={12} lg={3} className="contact__info">
           <ContactInfoBox
             icon={ContactInfoIcon2}
-            textLine1="+00 123 - 456 -78"
-            textLine2="+00 987 - 654 -32"
+            textLine1="+1 317 - 993 - 2160"
           />
         </Col>
         <Col xs={12} lg={3} className="contact__info">
           <ContactInfoBox
             icon={ContactInfoIcon3}
-            textLine1="mint@mintmail.com"
-            textLine2=""
+            textLine1="jimit1@gmail.com"
           />
         </Col>
       </Row>

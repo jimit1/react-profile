@@ -21,44 +21,55 @@ class Blog extends React.Component {
       {
         image: Preview01,
         id: "1",
-        title: "SUPER BLOG ARTICLE!",
-        description: "Lorem ipsum dolor sit amet, consectetur undo thes tabore et dolore magna aliqua.",
-        date: "21 April 2020",
+        title: "Bucket-It List",
+        description:
+          "Social Media App coded from scratch using MySQL, JS, Express, Passport, becryptjs",
+        date: "22 July 2020",
+        link: "https://github.com/jimit1/book-it-list",
       },
       {
         image: Preview02,
         id: "2",
-        title: "AWESOME ARTICLE!",
-        description: "Lorem ipsum dolor undo thes tabore et dolore magna aliqua.",
-        date: "27 April 2020",
+        title: "GAMES APP",
+        description:
+          "A fun and interactive games app coded from scratch using JS, jQuery, Bootstrap",
+        date: "16 May 2020",
+        link: "https://github.com/jimit1/GroupProject1-1",
       },
       {
         image: Preview03,
         id: "3",
-        title: "SUPER TITLE!",
-        description: "Lorem tabore et dolore magna aliqua ipsum dolor undo thes.",
-        date: "03 May 2020",
+        title: "Fitness Tracker",
+        description:
+          "App to view, create and track daily workouts and log multiple exercises in a workout",
+        date: "02 Aug 2020",
+        link: "https://github.com/jimit1/FitnessTracker",
       },
       {
         image: Preview04,
         id: "4",
-        title: "BLOG TITLE!",
-        description: "Lorem tabore et dolore magna aliqua ipsum dolor undo thes.",
-        date: "15 May 2020",
+        title: "Note Taker",
+        description:
+          "An app to write, save, and delete notes. Uses an express backend.",
+        date: "20 June 2020",
+        link: "https://github.com/jimit1/noteTaker",
       },
       {
         image: Preview05,
         id: "5",
-        title: "BLOG ARTICLE!",
-        description: "Lorem tabore et dolore magna aliqua ipsum dolor undo thes.",
-        date: "20 May 2020",
+        title: "Good README Generator",
+        description:
+          "Generates a quick README.md file based on user prompts on the cli using node",
+        date: "31 May 2020",
+        link: "https://github.com/jimit1/readMeGenerator",
       },
       {
         image: Preview06,
         id: "6",
-        title: "AWESOME TITLE!",
-        description: "Lorem tabore et dolore magna aliqua ipsum dolor undo thes.",
-        date: "23 May 2020",
+        title: "Weather Dashboard",
+        description: "Track Weather of your city. Leverage OpenWeatherApi",
+        date: "09 May 2020",
+        link: "https://jimit1.github.io/weather-app/",
       },
     ],
   };
@@ -106,9 +117,10 @@ class Blog extends React.Component {
     return (
       <div className="blog" id="blog">
         <div className="wrapper">
-          <Title title="OUR BLOG." />
+          <Title title="PROJECTS" />
           <p className="font12">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt<br></br>ut labore et dolore magna aliqua.
+            Projects showcasing skills is Javascript, Node.js, React.js,
+            Express.js, MySQL, MongoDB
           </p>
           <div className="padding30">
             <Swiper {...params}>{storiesRender}</Swiper>

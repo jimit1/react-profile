@@ -1,18 +1,19 @@
-import React from 'react';
-import './style/App.scss';
+import React from "react";
 
-// Components
-import DesktopNav from './components/navbar/desktop-nav';
-import MobileNav from './components/navbar/mobile-nav';
-import Backdrop from "./components/navbar/backdrop";
-import Hero from './components/hero/hero';
-import Portfolio from "./components/portfolio/portfolio";
-import Partners from "./components/partners/partners";
 import About from "./components/about/about";
 import Blog from "./components/blog/blog";
 import Contact from "./components/contact/contact";
 import Footer from "./components/footer/footer";
- 
+import Hero from "./components/hero/hero";
+import Backdrop from "./components/navbar/backdrop";
+// Components
+import DesktopNav from "./components/navbar/desktop-nav";
+import MobileNav from "./components/navbar/mobile-nav";
+import Partners from "./components/partners/partners";
+import Portfolio from "./components/portfolio/portfolio";
+
+import "./style/App.scss";
+
 class App extends React.Component {
   state = {
     userIsScrolled: false,
@@ -69,7 +70,7 @@ class App extends React.Component {
         />
         <Hero />
         <Portfolio />
-        <Partners />
+        {/* <Partners /> */}
         <About />
         <Blog />
         <Contact />
