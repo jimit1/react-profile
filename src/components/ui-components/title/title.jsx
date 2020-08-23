@@ -5,7 +5,7 @@ import "./title.scss";
 
 const title = (props) => (
   <Row>
-    <Col className="big__title">
+    <Col className="big_title">
       <h2 className="weight800 font60 padding40">{props.title}</h2>
     </Col>
   </Row>
