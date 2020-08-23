@@ -12,7 +12,6 @@ import Preview4 from "../../assets/portfolio/project04/preview.png";
 import Preview5 from "../../assets/portfolio/project05/preview.png";
 import Preview6 from "../../assets/portfolio/project06/preview.png";
 //Components
-import Button from "../ui-components/button/button";
 import Title from "../ui-components/title/title";
 import ProjectBox from "../ui-components/projectBox/projectBox";
 
@@ -236,9 +235,7 @@ class Portfolio extends React.Component {
           >
             {projectsRender}
           </Masonry>
-          <Row className="flex-center padding40">
-            {/* <Button label="HAVE WORK FOR US?" target={"contact"} /> */}
-          </Row>
+          <Row className="flex-center padding40"></Row>
         </div>
       </div>
     );

@@ -5,7 +5,7 @@ import "./blogBox.scss";
 const blog = (props) => (
   <div className="blog__box">
     <div className="blog__image">
-      <a href={props.article.link} target="_blank">
+      <a href={props.article.link} target="_blank" rel="noopener noreferrer">
         <img src={props.article.image} alt="blog story" />
         <div className="blog__hover flex-center">
           <h4 className="font30 weight800">READ MORE</h4>

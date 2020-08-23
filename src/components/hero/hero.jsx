@@ -5,7 +5,6 @@ import { Col, Row } from "react-flexbox-grid";
 import HeroImage from "../../assets/hero/profile.jpg";
 import ContactSocial from "../contact/contactInfo/contactSocial";
 //Components
-import Button from "../ui-components/button/button";
 
 // SCSS
 import "./hero.scss";
@@ -37,9 +36,8 @@ const hero = () => (
               skills, entrepreneurial drive, and unceasing spirit to all
               endeavors.
             </p>
-            <ContactSocial />
-            {/* <Button label="SEND MESSAGE" target={"contact"} /> */}
           </div>
+          <ContactSocial />
         </Col>
         <Col md={12} lg={6}>
           <div className="hero-image">

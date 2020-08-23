@@ -4,7 +4,7 @@ import "./projectBox.scss";
 
 const projectBox = (props) => (
   <div className="portfolio__box">
-    <a href={props.link} target="_blank">
+    <a href={props.link} target="_blank" rel="noopener noreferrer">
       <img src={props.preview} alt="project" />
       <div className="portfolio__hover-info flex-center">
         <div className="text-center">
